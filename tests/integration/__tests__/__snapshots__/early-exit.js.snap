@@ -47,6 +47,9 @@ Format options:
   --bracket-same-line      Put > of opening tags on the last line instead of on a new line.
                            Defaults to false.
   --no-bracket-spacing     Do not print spaces between brackets.
+  --break-before-statement <never|conditionals|loops|always>
+                           Always add line breaks before statement following if, else, with, for, for each, while and do.
+                           Defaults to never.
   --embedded-language-formatting <auto|off>
                            Control how Prettier formats quoted code embedded in the file.
                            Defaults to auto.
@@ -212,6 +215,9 @@ Format options:
   --bracket-same-line      Put > of opening tags on the last line instead of on a new line.
                            Defaults to false.
   --no-bracket-spacing     Do not print spaces between brackets.
+  --break-before-statement <never|conditionals|loops|always>
+                           Always add line breaks before statement following if, else, with, for, for each, while and do.
+                           Defaults to never.
   --embedded-language-formatting <auto|off>
                            Control how Prettier formats quoted code embedded in the file.
                            Defaults to auto.

@@ -7229,9 +7229,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@workspace:.":
+"prettily@workspace:.":
   version: 0.0.0-use.local
-  resolution: "prettier@workspace:."
+  resolution: "prettily@workspace:."
   dependencies:
     "@angular/compiler": "npm:18.2.6"
     "@babel/code-frame": "npm:7.25.9"
@@ -7354,7 +7354,7 @@ __metadata:
     wcwidth.js: "npm:2.0.0"
     yaml-unist-parser: "npm:2.0.1"
   bin:
-    prettier: ./bin/prettier.cjs
+    prettily: ./bin/prettily.cjs
   languageName: unknown
   linkType: soft
 

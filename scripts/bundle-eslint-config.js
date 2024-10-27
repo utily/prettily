@@ -111,7 +111,7 @@ export default [
   },
 
   {
-    files: ["bin/prettier.cjs"],
+    files: ["bin/prettily.cjs"],
     languageOptions: {
       ecmaVersion: 5,
     },

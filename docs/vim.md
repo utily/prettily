@@ -17,7 +17,7 @@ The best way to install Neoformat is with your favorite plugin manager for Vim, 
 Plug 'sbdchd/neoformat'
 ```
 
-In order for Neoformat to use a project-local version of Prettier (i.e. to use `node_modules/.bin/prettier` instead of looking for `prettier` on `$PATH`), you must set the `neoformat_try_node_exe` option:
+In order for Neoformat to use a project-local version of Prettier (i.e. to use `node_modules/.bin/prettily` instead of looking for `prettier` on `$PATH`), you must set the `neoformat_try_node_exe` option:
 
 ```vim
 let g:neoformat_try_node_exe = 1
