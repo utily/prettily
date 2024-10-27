@@ -9,27 +9,24 @@ on:
       - "release-*"
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - run: yarn install --immutable
-      - run: yarn test
+      - uses: actions/checkout@v3
 
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Use Node LTS ✨
+        uses: actions/setup-node@v3
         with:
-          node-version: 20
-          registry-url: https://registry.npmjs.org/
-      - run: yarn install --immutable
-      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
-      - run: yarn npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          node-version: lts/*
+          registry-url: https://registry.npmjs.org
+          cache: yarn
+
+      - name: Install dependencies 📦️
+        run: yarn install --immutable
+
+      - name: Build 🔨
+        run: yarn build
+
+      - uses: simenandre/publish-with-yarn@v1
+        with:
+          npm-auth-token: ${{ secrets.NPM_TOKEN }}
