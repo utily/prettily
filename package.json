@@ -1,6 +1,6 @@
 {
   "name": "prettily",
-  "version": "3.4.0-dev",
+  "version": "1.0.0",
   "description": "Prettily formats",
   "bin": "./bin/prettily.cjs",
   "repository": "utily/prettily",
