@@ -788,12 +788,12 @@ const nodejsFiles = [
     input: "src/index.cjs",
   },
   {
-    input: "bin/prettier.cjs",
-    outputBaseName: "bin/prettier",
+    input: "bin/prettily.cjs",
+    outputBaseName: "bin/prettily",
     target: ["node0.10"],
     replaceModule: [
       {
-        module: path.join(PROJECT_ROOT, "bin/prettier.cjs"),
+        module: path.join(PROJECT_ROOT, "bin/prettily.cjs"),
         process: (text) =>
           text.replace("../src/cli/index.js", "../internal/cli.mjs"),
       },

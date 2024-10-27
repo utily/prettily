@@ -2,7 +2,7 @@ overrides:
   - files: "**/*.{js,mjs,cjs}"
     options:
       parser: meriyah
-  - files: "bin/prettier.cjs"
+  - files: "bin/prettily.cjs"
     options:
       trailingComma: none
   - files:

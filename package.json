@@ -1,11 +1,11 @@
 {
-  "name": "prettier",
+  "name": "prettily",
   "version": "3.5.0-dev",
-  "description": "Prettier is an opinionated code formatter",
-  "bin": "./bin/prettier.cjs",
-  "repository": "prettier/prettier",
-  "funding": "https://github.com/prettier/prettier?sponsor=1",
-  "homepage": "https://prettier.io",
+  "description": "Prettily formats",
+  "bin": "./bin/prettily.cjs",
+  "repository": "utily/prettily",
+  "funding": "https://github.com/utily/prettily?sponsor=1",
+  "homepage": "https://github.com/utily/prettily",
   "author": "James Long",
   "type": "module",
   "license": "MIT",
@@ -163,8 +163,8 @@
     "test:dist": "cross-env NODE_ENV=production yarn test",
     "test:dist-standalone": "cross-env TEST_STANDALONE=1 yarn test:dist",
     "test:dist-lint": "eslint dist --config=./scripts/bundle-eslint-config.js --quiet",
-    "perf": "yarn && yarn build && cross-env NODE_ENV=production node ./dist/bin/prettier.cjs",
-    "perf:inspect": "yarn && yarn build && cross-env NODE_ENV=production node --inspect-brk ./dist/bin/prettier.cjs",
+    "perf": "yarn && yarn build && cross-env NODE_ENV=production node ./dist/bin/prettily.cjs",
+    "perf:inspect": "yarn && yarn build && cross-env NODE_ENV=production node --inspect-brk ./dist/bin/prettily.cjs",
     "perf:benchmark": "yarn perf --debug-benchmark",
     "perf:compare": "./scripts/benchmark/compare.sh",
     "lint": "run-p \"lint:*\"",
@@ -182,7 +182,7 @@
     "build": "node ./scripts/build/build.js",
     "build:website": "node ./scripts/build-website.js",
     "gen:changelog": "node ./scripts/generate-changelog.js",
-    "debug": "node bin/prettier.js --ignore-path=.prettierignore"
+    "debug": "node bin/prettily.js --ignore-path=.prettierignore"
   },
   "c8": {
     "reporter": [
@@ -195,7 +195,7 @@
       "bin/**"
     ],
     "exclude": [
-      "bin/prettier.js",
+      "bin/prettily.js",
       "src/standalone.js",
       "src/index.cjs",
       "src/document/debug.js",

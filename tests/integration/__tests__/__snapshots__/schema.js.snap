@@ -35,6 +35,36 @@ exports[`schema 1`] = `
           "description": "Print spaces between brackets.",
           "type": "boolean",
         },
+        "breakBeforeStatement": {
+          "default": "never",
+          "description": "Always add line breaks before statement following if, else, with, for, for each, while and do.",
+          "oneOf": [
+            {
+              "description": "never add hard break",
+              "enum": [
+                "never",
+              ],
+            },
+            {
+              "description": "only after if, else and with",
+              "enum": [
+                "conditionals",
+              ],
+            },
+            {
+              "description": "only after for, for each, while and do",
+              "enum": [
+                "loops",
+              ],
+            },
+            {
+              "description": "add hard break",
+              "enum": [
+                "always",
+              ],
+            },
+          ],
+        },
         "cursorOffset": {
           "default": -1,
           "description": "Print (to stderr) where a cursor at the given position would move to after formatting.",

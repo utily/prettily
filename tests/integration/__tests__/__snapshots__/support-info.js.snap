@@ -103,6 +103,16 @@ exports[`API getSupportInfo() 1`] = `
       "default": true,
       "type": "boolean",
     },
+    "breakBeforeStatement": {
+      "choices": [
+        "never",
+        "conditionals",
+        "loops",
+        "always",
+      ],
+      "default": "never",
+      "type": "choice",
+    },
     "cursorOffset": {
       "default": -1,
       "range": {
@@ -801,6 +811,26 @@ exports[`CLI --support-info (stdout) 1`] = `
       "oppositeDescription": "Do not print spaces between brackets.",
       "pluginDefaults": {},
       "type": "boolean"
+    },
+    {
+      "category": "JavaScript",
+      "choices": [
+        { "description": "never add hard break", "value": "never" },
+        {
+          "description": "only after if, else and with",
+          "value": "conditionals"
+        },
+        {
+          "description": "only after for, for each, while and do",
+          "value": "loops"
+        },
+        { "description": "add hard break", "value": "always" }
+      ],
+      "default": "never",
+      "description": "Always add line breaks before statement following if, else, with, for, for each, while and do.",
+      "name": "breakBeforeStatement",
+      "pluginDefaults": {},
+      "type": "choice"
     },
     {
       "category": "Special",

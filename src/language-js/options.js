@@ -109,6 +109,31 @@ const options = {
     ],
   },
   singleAttributePerLine: commonOptions.singleAttributePerLine,
+  breakBeforeStatement: {
+    category: CATEGORY_JAVASCRIPT,
+    type: "choice",
+    default: "never",
+    description:
+      "Always add line breaks before statement following if, else, with, for, for each, while and do.",
+    choices: [
+      {
+        value: "never",
+        description: "never add hard break",
+      },
+      {
+        value: "conditionals",
+        description: "only after if, else and with",
+      },
+      {
+        value: "loops",
+        description: "only after for, for each, while and do",
+      },
+      {
+        value: "always",
+        description: "add hard break",
+      },
+    ],
+  },
 };
 
 export default options;

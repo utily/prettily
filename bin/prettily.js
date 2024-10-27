@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 /*
-Add this file so we can use `node bin/prettier` or `node bin/prettier.js`
-instead of `node bin/prettier.cjs`.
+Add this file so we can use `node bin/prettily` or `node bin/prettily.js`
+instead of `node bin/prettily.cjs`.
 
 This file should only used for development.
 */
